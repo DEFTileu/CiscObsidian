@@ -88,7 +88,7 @@
   [[Book 2. Switching, Routing, and Wireless Essentials/09 - FHRP Concepts/9.1. First Hop Redundancy Protocols|Book 2 Module 9.1 - First Hop Redundancy Protocols]]
   [[Book 2. Switching, Routing, and Wireless Essentials/09 - FHRP Concepts/9.2. HSRP|Book 2 Module 9.2 - HSRP]]
 
-- [ ] [[Labs/Lab11|Lab 11]] `lab11a.pka`
+- [ ] [[Lab11a|Lab 11]] `lab11a.pka`
   Source: [Google Drive](https://drive.google.com/file/d/1PPsIfDkyGzlWsqj_vaiffGDbuYT0o8l/view?usp=drivesdk)
   Topic: DHCP
   Modules:

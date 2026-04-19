@@ -10,4 +10,4 @@
 ## Практика
 
 - [[Labs/Lab7|Lab 7 — Port Security]]
-- [[Labs/Lab11|Lab 11 — DHCP]]
+- [[Labs/Lab11a|Lab 11a — WLC Configuration]]

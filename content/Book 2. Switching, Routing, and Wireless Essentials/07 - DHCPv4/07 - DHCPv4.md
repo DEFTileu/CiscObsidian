@@ -8,4 +8,4 @@
 ## Практика
 
 - [[Labs/Lab10|Lab 10 — VLAN + Inter-VLAN Routing + DHCP]]
-- [[Labs/Lab11|Lab 11 — DHCP]]
+- [[Labs/Lab11a|Lab 11a — WLC Configuration (DHCP)]]

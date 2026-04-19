@@ -29,7 +29,8 @@
 - [[Labs/Lab8|Lab 8]]
 - [[Labs/Lab9|Lab 9]]
 - [[Labs/Lab10|Lab 10]]
-- [[Labs/Lab11|Lab 11]]
+- [[Labs/Lab11a|Lab 11a — WLC Configuration]]
+- [[Labs/Lab11b|Lab 11b — Wireless Troubleshooting]]
 - [[Labs/Lab12|Lab 12]]
 
 ## Other Sections
