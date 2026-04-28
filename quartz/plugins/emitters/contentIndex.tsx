@@ -28,6 +28,7 @@ interface Options {
   rssFullHtml: boolean
   rssSlug: string
   includeEmptyFiles: boolean
+  excludePaths: string[]
 }
 
 const defaultOptions: Options = {
@@ -37,6 +38,19 @@ const defaultOptions: Options = {
   rssFullHtml: false,
   rssSlug: "index",
   includeEmptyFiles: true,
+  excludePaths: [],
+}
+
+function shouldExclude(slug: FullSlug, filePath: FilePath, excludePaths: string[]): boolean {
+  return excludePaths.some((prefix) => {
+    const normalized = prefix.replace(/\\/g, "/").replace(/^\/+|\/+$/g, "")
+    return (
+      slug === normalized ||
+      slug.startsWith(`${normalized}/`) ||
+      filePath === normalized ||
+      filePath.startsWith(`${normalized}/`)
+    )
+  })
 }
 
 function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndexMap): string {
@@ -101,6 +115,9 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
       const linkIndex: ContentIndexMap = new Map()
       for (const [tree, file] of content) {
         const slug = file.data.slug!
+        if (shouldExclude(slug, file.data.relativePath!, opts.excludePaths)) {
+          continue
+        }
         const date = getDate(ctx.cfg.configuration, file.data) ?? new Date()
         if (opts?.includeEmptyFiles || (file.data.text && file.data.text !== "")) {
           linkIndex.set(slug, {

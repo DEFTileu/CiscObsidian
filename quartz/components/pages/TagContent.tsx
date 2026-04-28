@@ -18,6 +18,8 @@ const defaultOptions: TagContentOptions = {
   numPages: 10,
 }
 
+const isLabsSlug = (slug?: string) => slug === "Labs" || slug?.startsWith("Labs/")
+
 export default ((opts?: Partial<TagContentOptions>) => {
   const options: TagContentOptions = { ...defaultOptions, ...opts }
 
@@ -31,8 +33,10 @@ export default ((opts?: Partial<TagContentOptions>) => {
 
     const tag = simplifySlug(slug.slice("tags/".length) as FullSlug)
     const allPagesWithTag = (tag: string) =>
-      allFiles.filter((file) =>
-        (file.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes).includes(tag),
+      allFiles.filter(
+        (file) =>
+          !isLabsSlug(file.slug) &&
+          (file.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes).includes(tag),
       )
 
     const content = (
@@ -45,7 +49,10 @@ export default ((opts?: Partial<TagContentOptions>) => {
     if (tag === "/") {
       const tags = [
         ...new Set(
-          allFiles.flatMap((data) => data.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes),
+          allFiles
+            .filter((data) => !isLabsSlug(data.slug))
+            .flatMap((data) => data.frontmatter?.tags ?? [])
+            .flatMap(getAllSegmentPrefixes),
         ),
       ].sort((a, b) => a.localeCompare(b))
       const tagItemMap: Map<string, QuartzPluginData[]> = new Map()

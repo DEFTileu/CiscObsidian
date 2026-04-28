@@ -9,7 +9,3 @@
 [[VLSM]]
 [[Structured Design]]
 
-## Практика
-
-- [[Labs/Lab4|Lab 4 — VLSM & IPv4 Static Routing]]
-

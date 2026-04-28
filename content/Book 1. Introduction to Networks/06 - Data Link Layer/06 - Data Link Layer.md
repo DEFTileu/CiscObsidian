@@ -3,9 +3,6 @@
 [[Topologies]]
 [[Data Link Frame]]
 
-## Практика
-
-- [[Labs/Lab7|Lab 7 — Ethernet + ARP]]
 
 ---
 
@@ -23,4 +20,3 @@
 ![[Screenshot 2026-04-18 at 12.09.46.png]]
 ![[Screenshot 2026-04-18 at 12.09.55.png]]
 ![[Screenshot 2026-04-18 at 12.10.03.png]]
-
