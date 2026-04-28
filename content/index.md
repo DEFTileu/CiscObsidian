@@ -18,12 +18,12 @@
 
 ## Student Help
 
-- [[SDU Javazhan Tech]]
+- [[sdu.javazhan.tech/index|SDU.JAVAZHAN.TECH - Telegram-бот для студентов SDU]]
 - [sdu.javazhan.tech](https://sdu.javazhan.tech)
 
 ![](./statics/sdu-javazhan-tech.png)
 
-**SDU.JAVAZHAN.TECH** — сайт для помощи студентам.
+**SDU.JAVAZHAN.TECH** - бот, который следит за оценками, ловит квоты и напоминает о дедлайнах. Бесплатно.
 
 ## Other Sections
 
